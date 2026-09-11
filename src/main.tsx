@@ -2,8 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Button from '@mui/material/Button';
+import AppBar from '@mui/material/AppBar';
+import ButtonGroup from '@mui/material/ButtonGroup';
 
 // Page imports
 import Home from "./Home.tsx";
@@ -17,14 +19,18 @@ import Manual from "./manual/Manual.tsx";
 function App() {
   return (
     <BrowserRouter>
-      <Stack direction="row">
-        <Box><Link to="/">Home</Link> </Box>
-        <Box><Link to="/enroll_student">Manage Students</Link> </Box>
-        <Box><Link to="/add_instructor">Manage Instructors</Link> </Box>
-        <Box><Link to="/add_course">Manage Courses</Link> </Box>
-        <Box><Link to="/register">Register for Courses</Link> </Box>
-        <Box><Link to="/drop">Drop Courses</Link> </Box>
-      </Stack>
+      <AppBar position="static" className="Navbar">
+        <Toolbar>
+          <ButtonGroup>
+            <Button ><Link to="/" under-line="none">Home</Link> </Button>
+            <Button ><Link to="/enroll_student">Manage Students</Link> </Button>
+            <Button ><Link to="/add_instructor">Manage Instructors</Link> </Button>
+            <Button ><Link to="/add_course">Manage Courses</Link> </Button>
+            <Button ><Link to="/register">Register for Courses</Link> </Button>
+            <Button ><Link to="/drop">Drop Courses</Link> </Button>
+          </ButtonGroup>
+        </Toolbar>
+      </AppBar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/enroll_student" element={<Student_Management />} />
