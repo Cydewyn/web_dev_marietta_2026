@@ -138,7 +138,7 @@ function Footer() {
 function Header() {
   return (
     <>
-      <h1>Hello World</h1>
+      <h1>Course and Student Management System</h1>
     </>
   )
 }
