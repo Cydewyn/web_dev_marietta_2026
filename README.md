@@ -1,3 +1,9 @@
+## Information on Project ##
+
+Libraries Used: React, Vite, Base UI (React), Material UI (MUI), Material UI Icons (MUI Icon), React Router
+
+## Information on Setup Template ##
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -48,6 +48,9 @@ function App() {
   return (
     <ThemeProvider theme={isDarkMode?darkMode:lightMode}>
     <BrowserRouter>
+
+      <Header/>
+      
       <AppBar position="static" className="Navbar" sx={{width:1}}>
         
         <Desktop_App_Bar/>
@@ -129,6 +132,14 @@ function Footer() {
           Group Members: Collin Gladen, Ian Hufford, Claire Line
         </Typography>
       </Box>
+  )
+}
+
+function Header() {
+  return (
+    <>
+      <h1>Hello World</h1>
+    </>
   )
 }
 
