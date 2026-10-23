@@ -7,6 +7,8 @@ import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
 import NumberField from '../mui_material_components/NumberField';
 import Button from "@mui/material/Button";
+import IconButton from '@mui/material/IconButton';
+import HelpIcon from '@mui/icons-material/Help';
 import { Typography, Paper } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -226,6 +228,7 @@ function Add_Course() {
                         id="semester_select"
                         value={semester}
                         label="Semester"
+                        required
                         onChange={handleSemesterChange}
                   >
                         <MenuItem value="Spring">Spring</MenuItem>
@@ -247,6 +250,7 @@ function Add_Course() {
                 <TextField id="coursePrefix" label="Course Prefix" variant="outlined"
                 fullWidth
                 onChange={handleCoursePrefixChange}
+                required
                 sx={{
                   backgroundColor: "primary",
                   borderRadius: 1,
@@ -280,7 +284,7 @@ function Add_Course() {
 
                 {coursePrefixIsValid && (<Alert severity="error">Your entered course prefix is invalid; please enter a sequence of 3-4 capital letters</Alert>)}
 
-                <NumberField label="Course Number" id="courseNumber" min={1} max={3} value={courseNumber} onValueChange={(value) => {setCourseNumber(value??100)}}/>
+                <NumberField label="Course Number" required id="courseNumber" min={1} max={3} value={courseNumber} onValueChange={(value) => {setCourseNumber(value??100)}}/>
 
                 {/* <TextField id="courseNumber" label="Course Number" variant="outlined"
                 fullWidth
@@ -353,6 +357,7 @@ function Add_Course() {
                 <TextField id="courseName" label="Course Name" variant="outlined"
                 fullWidth
                 onChange={handleCourseNameChange}
+                required
                 sx={{
                   backgroundColor: "primary",
                   borderRadius: 1,
@@ -423,6 +428,7 @@ function Add_Course() {
                         id="daysOfferedSelect"
                         value={daytime}
                         label="daysOffered"
+                        required
                         onChange={handleDayTimeChange}
                   >
                         <MenuItem value="MWF">Monday, Wednesday, Friday</MenuItem>
@@ -512,6 +518,7 @@ function Add_Course() {
                 <TextField id="instuctorFirstName" label="Instructor First Name" variant="outlined"
                 fullWidth
                 onChange={handleInstructorFirstNameChange}
+                required
                 sx={{
                   backgroundColor: "primary",
                   borderRadius: 1,
@@ -547,6 +554,7 @@ function Add_Course() {
                 <TextField id="instructorLastName" label="Instructor Last Name" variant="outlined"
                 fullWidth
                 onChange={handleInstructorLastNameChange}
+                required
                 sx={{
                   backgroundColor: "primary",
                   borderRadius: 1,
