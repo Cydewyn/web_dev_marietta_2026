@@ -1,9 +1,37 @@
 import { Box, Typography, List, ListItem, ListItemText, ListItemIcon, Divider, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import './index.css';
+import { Box, Paper, Typography, List, ListItem, ListItemText } from "@mui/material";
 
-// Material Imports
-//import Stack from '@mui/material/Stack';
+export default function WebInterface() {
+  return (
+    <Box
+      sx={{
+        minHeight: "100vh",
+        bgcolor: "#121212",
+        color: "white",
+        p: 4,
+      }}
+    >
+      <Paper
+        sx={{
+          bgcolor: "#1e1e1e",
+          color: "white",
+          p: 4,
+          maxWidth: "1000px",
+          margin: "0 auto",
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            color: "white",
+            fontWeight: "bold",
+            mb: 3,
+          }}
+        >
+          Web Interface
+        </Typography>
 
 export default function Home() {
       return (
