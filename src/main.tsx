@@ -85,10 +85,6 @@ const navigationLinks = [
     label: "Drop Course",
     path: "/drop",
   },
-  {
-    label: "Manual",
-    path: "/manual",
-  },
 ];
 
 // Main Application
@@ -109,6 +105,7 @@ function App() {
   };
 
   return (
+    
     <Box
       sx={{
         minHeight: "100vh",
@@ -118,6 +115,7 @@ function App() {
         color: "text.primary",
       }}
     >
+      <Header></Header>
       {/* Navigation Bar */}
       <AppBar
         position="static"
@@ -127,20 +125,6 @@ function App() {
         }}
       >
         <Toolbar>
-          {/* Website Title */}
-          <Typography
-            variant="h6"
-            component={RouterLink}
-            to="/"
-            sx={{
-              flexGrow: 1,
-              color: "#ffffff",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
-          >
-            Course Registration System
-          </Typography>
 
           {/* Desktop Navigation */}
           <Box
@@ -151,6 +135,8 @@ function App() {
               },
               gap: 0.5,
               alignItems: "center",
+              ml: "auto",
+                mr: "auto",
             }}
           >
             {navigationLinks.map((link) => (
@@ -348,16 +334,13 @@ function Header() {
       <Typography variant="h1" sx={{fontSize: {xs: 24, sm: 36, md: 50}, pb: 1}}>Course and Student Management System</Typography>
     </>
   )
+}
+
 // Render Application
 const rootElement = document.getElementById("root");
 
-if (!rootElement) {
-  throw new Error(
-    "Root element not found. Check index.html."
-  );
-}
-
-createRoot(rootElement).render(
+if (rootElement) {
+  createRoot(rootElement).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -366,4 +349,9 @@ createRoot(rootElement).render(
       </BrowserRouter>
     </ThemeProvider>
   </StrictMode>
-);
+); }
+else {
+  throw new Error(
+    "Root element not found. Check index.html."
+  );
+}

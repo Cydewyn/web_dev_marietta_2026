@@ -1,9 +1,8 @@
-import { Box, Typography, List, ListItem, ListItemText, ListItemIcon, Divider, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Card, Box, Typography, List, ListItem, ListItemText, ListItemIcon, Divider, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import './index.css';
-import { Box, Paper, Typography, List, ListItem, ListItemText } from "@mui/material";
 
-export default function WebInterface() {
+/* export default function WebInterface() {
   return (
     <Box
       sx={{
@@ -32,11 +31,14 @@ export default function WebInterface() {
         >
           Web Interface
         </Typography>
+        </Box>
+        )} */
 
 export default function Home() {
       return (
             <Box>
                   <Typography variant="h2" sx={{fontSize:"5vh",mb:"3vh",mt:"3vh"}}>Welcome to the Course Management System</Typography>
+                  <SystemOverview/>
                   <Accordion >
                         <AccordionSummary expandIcon={<ExpandMoreIcon/>}><Typography variant="h3" sx={{fontSize:"3vh"}}>Student Functionalities</Typography></AccordionSummary>
                         <AccordionDetails>
@@ -67,5 +69,16 @@ export default function Home() {
                         </AccordionDetails>
                   </Accordion>
             </Box>
+      )
+}
+
+function SystemOverview() {
+      return (
+            <Card sx={{m:4, mt:2, p:2, textAlign:"left"}}>
+                  <Typography variant="body1" sx={{fontWeight:"bold"}}>Overview</Typography>
+                  <Divider sx={{mb:2}}></Divider>
+                  <Typography variant="body2">This course registration system allows students to manage their enrollments and instructors to manage their courses.</Typography>
+                  <Typography variant="body2"></Typography>
+            </Card>
       )
 }
