@@ -87,7 +87,7 @@ const navigationLinks = [
     path: "/",
   },
   {
-    label: "Enroll Student",
+    label: "Register Student",
     path: "/enroll_student",
   },
   {
@@ -138,7 +138,7 @@ function App() {
       <Header></Header>
       {/* Navigation Bar */}
       <AppBar
-        position="static"
+        position="fixed"
         sx={{
           bgcolor: "background.secondary",
         }}
@@ -270,7 +270,7 @@ function App() {
             element={<DropCourse />}
           />
 
-          {/* Programmer Manual */}
+          {/* Manual */}
           <Route
             path="/manual"
             element={<Manual />}

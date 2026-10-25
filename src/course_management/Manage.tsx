@@ -47,7 +47,7 @@ function Add_Course() {
   function MakeHelpButton() {
       return(
             <>
-                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw"}}>
+                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw",border:"solid 1px",borderColor:"primary.main"}}>
                         <QuestionMarkIcon/>
                   </IconButton>
                   <Dialog

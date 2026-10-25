@@ -40,7 +40,7 @@ function ManualIntroduction() {
                   <Typography variant="h2" sx={{fontSize: {xs: 32, sm: 40, md: 60}, color:"text.primary"}}>Manuals</Typography>
 
                   <br></br>
-                  <Typography variant="body1">Navigation through the website is performed using the appbar at the top of the page.</Typography>
+                  <Typography variant="body1">Navigation through the website is performed using the menu at the top of the page.</Typography>
                   <Typography variant="body2">To access this manual from any page on the website, you can click the 'Help' button in the lower left of the page.</Typography>
                   
             </Box>
@@ -69,6 +69,8 @@ function ProgrammerOverview() {
                         The "ReadMe" file for the website has a full list of dependencies for anyone working on the website.
                         Additional information on all aspects of the site may be found in the manuals below.
                   </Typography>
+                  <Typography sx={{mt:"2vh"}} variant="body1">Need to access the code? Click the button below to be brought to our Github Repository.</Typography>
+                  <Button href="https://github.com/Cydewyn/web_dev_marietta_2026" variant="outlined" sx={{mt:"2vh"}}>Access the Github</Button>
             </Card>
       )
 }

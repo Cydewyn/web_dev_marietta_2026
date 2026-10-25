@@ -14,6 +14,14 @@ export function validateRegisterCourseForm(
   // Get the form fields
   const form = event.currentTarget;
 
+  const firstName = (
+    form.querySelector("#studentFirstName") as HTMLInputElement
+  ).value.trim();
+
+  const lastName = (
+    form.querySelector("#studentLastName") as HTMLInputElement
+  ).value.trim();
+
   const coursePrefix = (
     form.querySelector("#coursePrefix") as HTMLInputElement
   ).value.trim();
@@ -27,11 +35,30 @@ export function validateRegisterCourseForm(
   ).value.trim();
 
   // Validation patterns
+  const namePattern = /^[A-Za-z '-]+$/;
   const prefixPattern = /^[A-Z]{3,4}$/;
   const courseNumberPattern = /^\d{3}$/;
   const sectionPattern = /^\d{2}$/;
   // Store errors
   const errors: string[] = [];
+
+  // Validate first name
+  if (firstName === "") {
+    errors.push("Student's First Name is required.");
+  } else if (!namePattern.test(firstName)) {
+    errors.push(
+      "Student's First Name may only contain letters, spaces, hyphens, and apostrophes."
+    );
+  }
+
+  // Validate last name
+  if (lastName === "") {
+    errors.push("Student's Last Name is required.");
+  } else if (!namePattern.test(lastName)) {
+    errors.push(
+      "Student's Last Name may only contain letters, spaces, hyphens, and apostrophes."
+    );
+  }
 
 
   // Validate course prefix

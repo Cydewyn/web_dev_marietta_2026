@@ -28,7 +28,7 @@ function EnrollStudent() {
   function MakeHelpButton() {
       return(
             <>
-                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw"}}>
+                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw",border:"solid 1px",borderColor:"primary.main"}}>
                         <QuestionMarkIcon/>
                   </IconButton>
                   <Dialog
@@ -49,7 +49,7 @@ function EnrollStudent() {
                             <ListItemText primary="Student First Name" secondary="Required. Enter the student's first name in its entirety. For example, 'David' or 'Fatima.' Spaces, hyphens, and apostrophes are permitted."/>
                           </ListItem>
                           <ListItem>
-                            <ListItemText primary="Student Last Name" secondary="Required. Enter the student's last name in its entirety. For example, 'Williams' 'O'Connell', 'al-Sayid' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
+                            <ListItemText primary="Student Last Name" secondary="Required. Enter the student's last name in its entirety. For example, 'Williams,' 'O'Connell', 'al-Sayid,' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
                           </ListItem>
                           <ListItem>
                             <ListItemText primary="Student Class Year" secondary="Required. Select the student's current class year. Selection should be by credit hours. This uses the American system. 'Freshman' is a first-year student (< 30 credit hours), 'Sophmore' is a second-year student (30-59 credit hours), 'Junior' is a third-year student (60-89 credit hours), and 'Senior' is a student in their final year of school (90+ credit hours). If the student has been at the college for four or more years, select 'Senior.'"/>
@@ -114,7 +114,7 @@ function EnrollStudent() {
               gutterBottom
               sx={{color:"text.primary"}}
             >
-              Enroll Student
+              Register Student
             </Typography>
             <MakeHelpButton/>
           </Box>

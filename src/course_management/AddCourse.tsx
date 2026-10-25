@@ -41,7 +41,7 @@ function AddCourse() {
   function MakeHelpButton() {
       return(
             <>
-                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw"}}>
+                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw",border:"solid 1px",borderColor:"primary.main"}}>
                         <QuestionMarkIcon/>
                   </IconButton>
                   <Dialog
@@ -92,7 +92,7 @@ function AddCourse() {
                             <ListItemText primary="Instructor First Name" secondary="Required. Enter the instructor's first name in its entirety. For example, 'David' or 'Fatima.' Spaces, hyphens, and apostrophes are permitted."/>
                           </ListItem>
                           <ListItem>
-                            <ListItemText primary="Instructor Last Name" secondary="Required. Enter the instructor's last name in its entirety. For example, 'Williams' 'O'Connell', 'al-Sayid' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
+                            <ListItemText primary="Instructor Last Name" secondary="Required. Enter the instructor's last name in its entirety. For example, 'Williams,' 'O'Connell', 'al-Sayid,' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
                           </ListItem>
                           <ListItem>
                             <ListItemText primary="Enrollment Cap" secondary="Required. Enter the course's enrollment cap. This can range from 1 to 99 students."/>

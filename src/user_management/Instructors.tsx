@@ -35,7 +35,7 @@ export default function Instructors() {
    function MakeHelpButton() {
       return(
             <>
-                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw"}}>
+                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw",border:"solid 1px",borderColor:"primary.main"}}>
                         <QuestionMarkIcon/>
                   </IconButton>
                   <Dialog
@@ -51,23 +51,21 @@ export default function Instructors() {
                   <DialogContent >
                   <DialogContentText id="alert-dialog-description" sx={{color:"text.primary"}}>
                         <Typography variant="body2">On this page, you can add new instructors before creating courses. The following explains what is acceptable inputs for the following fields.</Typography>
-                        <List>
-                          <ListItem>
-                            <ListItemText primary="Required. Instructor First Name" secondary="Enter the instructor's first name in its entirety. For example, 'David' or 'Fatima.' Spaces, hyphens, and apostrophes are permitted."/>
-                          </ListItem>
-                          <ListItem>
-                            <ListItemText primary="Required. Instructor Last Name" secondary="Enter the instructor's last name in its entirety. For example, 'Williams' 'O'Connell', 'al-Sayid' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
-                          </ListItem>
-                          <ListItem>
-                            <ListItemText primary="Optional. Instructor Department" secondary="Enter the instructor's department. For example, 'English' or 'Mathematics and Computer Science.' Please spell out department names in their entirety with no abbreviations."/>
-                          </ListItem>
-                          <ListItem>
-                            <ListItemText primary="Required. Instructor Rank" secondary="Select the instructor's rank from the dropdown. Professor is a senior tenured faculty member. Associate Professor is used for a junior tenured faculty member. Assistant Professor may be used for tenured or tenure-track faculty who do not hold higher positions. Use Instructor for any other case."/>
-                          </ListItem>
-                          <ListItem>
-                            <ListItemText primary="Required. Instructor Email" secondary="Enter the instructor's email. Only @marietta.edu emails are permitted (in the formats ab123@marietta.edu or abc123@marietta.edu)."/>
-                          </ListItem>
-                        </List>
+                        <ListItem>
+                        <ListItemText primary="Instructor First Name" secondary="Required. Enter the instructor's first name in its entirety. For example, 'David' or 'Fatima.' Spaces, hyphens, and apostrophes are permitted."/>
+                        </ListItem>
+                        <ListItem>
+                        <ListItemText primary="Instructor Last Name" secondary="Required. Enter the instructor's last name in its entirety. For example, 'Williams,' 'O'Connell', 'al-Sayid,' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
+                        </ListItem>
+                        <ListItem>
+                        <ListItemText primary="Instructor Department" secondary="Optional. Enter the instructor's department. For example, 'English' or 'Mathematics and Computer Science.' Please spell out department names in their entirety with no abbreviations."/>
+                        </ListItem>
+                        <ListItem>
+                        <ListItemText primary="Instructor Rank" secondary="Required. Select the instructor's rank from the dropdown."/>
+                        </ListItem>
+                        <ListItem>
+                        <ListItemText primary="Instructor Email" secondary="Required. Enter the instructor's email. Only @marietta.edu emails are permitted (in the formats ab123@marietta.edu or abc123@marietta.edu)."/>
+                        </ListItem>
                   </DialogContentText>
                   </DialogContent>
                   <DialogActions>

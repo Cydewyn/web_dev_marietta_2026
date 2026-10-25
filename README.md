@@ -54,6 +54,8 @@ To run this project locally on your PC, you must download the entire repository 
 
 - npm i @mui/material
 
+- npm i @base-ui/react
+
 - npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 
 - npm i dayjs
