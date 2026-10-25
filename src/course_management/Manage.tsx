@@ -13,8 +13,18 @@ import { Typography, Paper } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import {Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  List,
+  ListItem,
+  ListItemText} from "@mui/material";
+  
 import dayjs, { Dayjs } from 'dayjs';
 import Alert from '@mui/material/Alert';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 // Material Imports
 //import Stack from '@mui/material/Stack';
@@ -34,6 +44,62 @@ export default function Course_Management() {
 
 function Add_Course() {
 
+  function MakeHelpButton() {
+      return(
+            <>
+                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw"}}>
+                        <QuestionMarkIcon/>
+                  </IconButton>
+                  <Dialog
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="alert-dialog-title"
+                  aria-describedby="alert-dialog-description"
+                  role="alertdialog"
+                  >
+                  <DialogTitle id="alert-dialog-title" sx={{color:"text.primary"}}>
+                  {"Enroll Student Help"}
+                  </DialogTitle>
+                  <DialogContent >
+                  <DialogContentText id="alert-dialog-description" sx={{color:"text.primary"}}>
+                        <Typography variant="body2">On this page, you can enroll new students. The following explains what is acceptable inputs for the following fields.</Typography>
+                        <List>
+                          <ListItem>
+                            <ListItemText primary="Student First Name" secondary="Enter the student's first name in its entirety. For example, 'David' or 'Fatima.' Spaces, hyphens, and apostrophes are permitted."/>
+                          </ListItem>
+                          <ListItem>
+                            <ListItemText primary="Student Last Name" secondary="Enter the student's last name in its entirety. For example, 'Williams' 'O'Connell', 'al-Sayid' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
+                          </ListItem>
+                          <ListItem>
+                            <ListItemText primary="Student Class Year" secondary="Select the student's current class year. Selection should be by credit hours. This uses the American system. 'Freshman' is a first-year student (< 30 credit hours), 'Sophmore' is a second-year student (30-59 credit hours), 'Junior' is a third-year student (60-89 credit hours), and 'Senior' is a student in their final year of school (90+ credit hours). If the student has been at the college for four or more years, select 'Senior.'"/>
+                          </ListItem>
+                          <ListItem>
+                            <ListItemText primary="Student Major" secondary="Enter the student's major. Write 'Undeclared' if the student is undeclared. Spaces, apostrophes, and hyphens are allowed."/>
+                          </ListItem>
+                          <ListItem>
+                            <ListItemText primary="Student Email" secondary="Enter the student's email. Only @marietta.edu emails are permitted (in the formats ab123@marietta.edu or abc123@marietta.edu)."/>
+                          </ListItem>
+                        </List>
+                  </DialogContentText>
+                  </DialogContent>
+                  <DialogActions>
+                  <Button onClick={handleClose}>Close</Button>
+                  </DialogActions>
+                  </Dialog>
+            </>
+            )
+      }
+
+      const [open, setOpen] = React.useState(false);
+
+      const handleClickOpen = () => {
+      setOpen(true);
+      };
+
+      const handleClose = () => {
+      setOpen(false);
+      };
+
   // Define check booleans
   var [coursePrefixIsValid, setCoursePrefixIsValid] = React.useState(true);
   var [courseSectionIsValid, setCourseSectionIsValid] = React.useState(true);
@@ -43,6 +109,7 @@ function Add_Course() {
   // Form input pull
 
   function gatherFormInput() {
+
     var submitted_semester = semester;
     var submitted_courseYear = courseYear;
     var submitted_coursePrefix = coursePrefix;

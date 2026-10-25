@@ -19,6 +19,7 @@ Directory structure is mostly flat with some related pages placed in their own f
 ├── @eslint/js@10.0.1
 ├── @mui/icons-material@9.4.0
 ├── @mui/material@9.4.0
+├── @mui/x-date-pickers@9.15.0
 ├── @rolldown/plugin-babel@0.2.4
 ├── @types/babel__core@7.20.5
 ├── @types/node@24.13.4
@@ -26,6 +27,7 @@ Directory structure is mostly flat with some related pages placed in their own f
 ├── @types/react@19.3.0
 ├── @vitejs/plugin-react@6.1.1
 ├── babel-plugin-react-compiler@1.0.0
+├── dayjs@1.11.23
 ├── eslint-plugin-react-hooks@7.1.1
 ├── eslint-plugin-react-refresh@0.5.6
 ├── eslint@10.10.0
@@ -53,6 +55,10 @@ To run this project locally on your PC, you must download the entire repository 
 - npm i @mui/material
 
 - npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+
+- npm i dayjs
+
+- npm i @mui/x-date-pickers
 
 Once all dependencies are installed, the project can be run locally via npm. The command for local deployment is "npm run dev." 
 

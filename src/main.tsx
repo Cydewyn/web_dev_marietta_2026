@@ -38,15 +38,15 @@ import RegisterCourse from "./course_management/RegisterCourse";
 import DropCourse from "./course_management/DropCourse";
 import Manual from "./manual/Manual";
 
-// Dark Mode Theme
-const theme = createTheme({
+// DarkMode Theme
+const DarkMode = createTheme({
   palette: {
     mode: "dark",
     primary: {
       main: "#90caf9",
     },
     secondary: {
-      main: "#ce93d8",
+      main: "#273642",
     },
     background: {
       default: "#121212",
@@ -55,6 +55,27 @@ const theme = createTheme({
     text: {
       primary: "#ffffff",
       secondary: "#b0b0b0",
+    },
+  },
+});
+
+// LightMode Theme
+const LightMode = createTheme({
+  palette: {
+    mode: "light",
+    primary: {
+      main: "#6fa1ca",
+    },
+    secondary: {
+      main: "#344b5e",
+    },
+    background: {
+      default: "#ffffff",
+      paper: "#e0e0e0",
+    },
+    text: {
+      primary: "#000000",
+      secondary: "#212121",
     },
   },
 });
@@ -111,8 +132,7 @@ function App() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        bgcolor: "background.default",
-        color: "text.primary",
+        bgcolor: "background.primary",
       }}
     >
       <Header></Header>
@@ -120,8 +140,7 @@ function App() {
       <AppBar
         position="static"
         sx={{
-          bgcolor: "#1e1e1e",
-          color: "#ffffff",
+          bgcolor: "background.secondary",
         }}
       >
         <Toolbar>
@@ -144,7 +163,7 @@ function App() {
                 key={link.path}
                 component={RouterLink}
                 to={link.path}
-                color="inherit"
+                color="primary"
                 sx={{
                   fontWeight:
                     location.pathname === link.path
@@ -152,7 +171,7 @@ function App() {
                       : "normal",
                   borderBottom:
                     location.pathname === link.path
-                      ? "2px solid #90caf9"
+                      ? "2px solid"
                       : "2px solid transparent",
                   borderRadius: 0,
                   whiteSpace: "nowrap",
@@ -210,6 +229,8 @@ function App() {
         sx={{
           flexGrow: 1,
           py: 4,
+          color:"text.primary",
+          bgcolor:"background.primary",
         }}
       >
         <Routes>
@@ -293,8 +314,8 @@ function App() {
       <Box
         component="footer"
         sx={{
-          bgcolor: "#1e1e1e",
-          color: "#ffffff",
+          bgcolor: "background.primary",
+          color: "text.primary",
           textAlign: "center",
           p: 2,
         }}
@@ -331,7 +352,7 @@ function App() {
 function Header() {
   return (
     <>
-      <Typography variant="h1" sx={{fontSize: {xs: 24, sm: 36, md: 50}, pb: 1}}>Course and Student Management System</Typography>
+      <Typography variant="h1" sx={{fontSize: {xs: 24, sm: 36, md: 50}, pb: 1, color:"text.primary"}}>Course and Student Management System</Typography>
     </>
   )
 }
@@ -340,12 +361,20 @@ function Header() {
 const rootElement = document.getElementById("root");
 
 if (rootElement) {
+  var activeTheme;
+  var darkModeOn = window.matchMedia("(prefers-color-scheme: dark)");
+  var lightModeOn = window.matchMedia("(prefers-color-scheme: light)")
+  if (darkModeOn) {
+    activeTheme = DarkMode;
+  } else {
+    activeTheme = LightMode;
+  }
   createRoot(rootElement).render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={activeTheme}>
       <CssBaseline />
       <BrowserRouter>
-        <App />
+        <App/>
       </BrowserRouter>
     </ThemeProvider>
   </StrictMode>

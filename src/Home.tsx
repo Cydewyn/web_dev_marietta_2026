@@ -1,43 +1,57 @@
-import { Card, Box, Typography, List, ListItem, ListItemText, ListItemIcon, Divider, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import * as React from 'react';
+import { Card, Box, Button, Dialog,DialogTitle, DialogContent,DialogContentText,DialogActions, Typography, List, ListItem, ListItemText, Divider, Accordion, AccordionSummary, AccordionDetails, IconButton} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import './index.css';
 
-/* export default function WebInterface() {
-  return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        bgcolor: "#121212",
-        color: "white",
-        p: 4,
-      }}
-    >
-      <Paper
-        sx={{
-          bgcolor: "#1e1e1e",
-          color: "white",
-          p: 4,
-          maxWidth: "1000px",
-          margin: "0 auto",
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{
-            color: "white",
-            fontWeight: "bold",
-            mb: 3,
-          }}
-        >
-          Web Interface
-        </Typography>
-        </Box>
-        )} */
-
 export default function Home() {
+
+      function MakeHelpButton() {
+      return(
+            <>
+                  <IconButton onClick={handleClickOpen} sx={{width:"2.5vw",height:"2.5vw", ml:"1vw"}}>
+                        <QuestionMarkIcon/>
+                  </IconButton>
+                  <Dialog
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="alert-dialog-title"
+                  aria-describedby="alert-dialog-description"
+                  role="alertdialog"
+                  >
+                  <DialogTitle id="alert-dialog-title" sx={{color:"text.primary"}}>
+                  {"Example Help Dialogue"}
+                  </DialogTitle>
+                  <DialogContent >
+                  <DialogContentText id="alert-dialog-description">
+                        Click the button below or outside the alert box to close out.
+                  </DialogContentText>
+                  </DialogContent>
+                  <DialogActions>
+                  <Button onClick={handleClose}>Close</Button>
+                  </DialogActions>
+                  </Dialog>
+            </>
+            )
+      }
+
+      const [open, setOpen] = React.useState(false);
+
+      const handleClickOpen = () => {
+      setOpen(true);
+      };
+
+      const handleClose = () => {
+      setOpen(false);
+      };
+
       return (
-            <Box>
-                  <Typography variant="h2" sx={{fontSize:"5vh",mb:"3vh",mt:"3vh"}}>Welcome to the Course Management System</Typography>
+            <Box sx={{bgcolor:"background.primary"}}>
+                  <Box sx={{display:"inline-flex"}}>
+                        <Typography variant="h2" sx={{fontSize:"5vh",mb:"3vh",mt:"1vh", color:"text.primary"}}>Welcome to the Course Management System</Typography>
+                        <MakeHelpButton/>
+                  </Box>
+                  
                   <SystemOverview/>
                   <Accordion >
                         <AccordionSummary expandIcon={<ExpandMoreIcon/>}><Typography variant="h3" sx={{fontSize:"3vh"}}>Student Functionalities</Typography></AccordionSummary>
@@ -75,10 +89,16 @@ export default function Home() {
 function SystemOverview() {
       return (
             <Card sx={{m:4, mt:2, p:2, textAlign:"left"}}>
-                  <Typography variant="body1" sx={{fontWeight:"bold"}}>Overview</Typography>
-                  <Divider sx={{mb:2}}></Divider>
-                  <Typography variant="body2">This course registration system allows students to manage their enrollments and instructors to manage their courses.</Typography>
-                  <Typography variant="body2"></Typography>
+                  <Typography variant="body1" sx={{fontWeight:"bold"}}>Ready to get started?</Typography>
+                  <Divider sx={{mb:1}}></Divider>
+                  <List>
+                        <ListItem>
+                              <ListItemText primary="Navigate the website using the navigation menu at the top of the page." secondary="Want an overview of the website's functionalities? The tabs below give short explainations of what you can do on each tab."/>
+                        </ListItem>
+                        <ListItem>
+                              <ListItemText primary="Need assistance? You can reference the manual by pressing the 'Help' button in the lower right corner of the page." secondary="Anytime you see a question mark ('?') button, you can press it to learn more about how the page functions."/>
+                        </ListItem>
+                  </List>
             </Card>
       )
 }
