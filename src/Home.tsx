@@ -93,7 +93,7 @@ function SystemOverview() {
                   <Divider sx={{mb:1}}></Divider>
                   <List>
                         <ListItem>
-                              <ListItemText primary="Navigate the website using the navigation menu at the top of the page." secondary="Want an overview of the website's functionalities? The tabs below give short explainations of what you can do on each tab."/>
+                              <ListItemText primary="Navigate the website using the navigation menu at the top of the page." secondary="Want an overview of the website's functionalities? The tabs below give short explanations of what you can do on each tab."/>
                         </ListItem>
                         <ListItem>
                               <ListItemText primary="Need assistance? You can reference the manual by pressing the 'Help' button in the lower right corner of the page." secondary="Anytime you see a question mark ('?') button, you can press it to learn more about how the page functions."/>

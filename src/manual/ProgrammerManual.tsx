@@ -110,7 +110,7 @@ function Architecture() {
                         <AccordionDetails>
                               <Typography variant="body2" sx={{textAlign:"left"}}>
                                     This folder contains the assets displayed to the browser for use in the browser icon. 
-                                    It is not sigificantly used in the project and no code is contained. 
+                                    It is not significantly used in the project and no code is contained. 
                                     Replacing the icon can be done by replacing the existing file with another by the same name (or finding all references in the system and changing them). 
                               </Typography>
                         </AccordionDetails>
@@ -138,7 +138,7 @@ function Architecture() {
                                     <AccordionDetails>
                                           <Typography variant="body2" sx={{textAlign:"left", mb:"2vh"}}>
                                                 All routes are created in the "Routes" component found in "main.tsx" under the "App" function. 
-                                                They are then taken by the "Toolbar" component to be mapped accross the toolbar. 
+                                                They are then taken by the "Toolbar" component to be mapped across the toolbar. 
                                                 Only the "Help" route (leading to the manual on this page) is not included in this set of routes. 
                                                 Instead, the route to the manuals can be accessed using the button in the lower left, which is an independent component in the "App" function. 
                                                 The manual's route is "/manual."
@@ -263,13 +263,13 @@ function Architecture() {
                                                       <ListItemText primary="package.json" secondary="Lists all modules used and their versions. Simplified compared to package-lock.json."/>
                                                 </ListItem>
                                                 <ListItem>
-                                                      <ListItemText primary="tsconfig.app.json" secondary="Configures Typescript instance, including linting settings. Note that 'No Unused Locals' is false, allowing for functions and variables to be declared without checking if they have been used. All parameters, however, must be used due to the setting under 'No Unused Parameters.'"/>
+                                                      <ListItemText primary="tsconfig.app.json" secondary="Configures Typescript instance for app, including linting settings. Note that 'No Unused Locals' is false, allowing for functions and variables to be declared without checking if they have been used. All parameters, however, must be used due to the setting under 'No Unused Parameters.'"/>
                                                 </ListItem>
                                                 <ListItem>
-                                                      <ListItemText primary="tsconfig.json" secondary="Serves as a reference to tsconfig.app.json and the associated tsconfig.node.json."/>
+                                                      <ListItemText primary="tsconfig.json" secondary="Serves as base configuration for Typescript built, linking to tsconfig.app.json and the associated tsconfig.node.json."/>
                                                 </ListItem>
                                                 <ListItem>
-                                                      <ListItemText primary="tsconfig.node.json" secondary="Establishes node compiler for the website."/>
+                                                      <ListItemText primary="tsconfig.node.json" secondary="Establishes node tsconfig for the website."/>
                                                 </ListItem>
                                                 <ListItem>
                                                       <ListItemText primary="vite.config.ts" secondary="Configures the vite instance."/>

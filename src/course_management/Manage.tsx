@@ -71,7 +71,7 @@ function Add_Course() {
                             <ListItemText primary="Student Last Name" secondary="Enter the student's last name in its entirety. For example, 'Williams' 'O'Connell', 'al-Sayid' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
                           </ListItem>
                           <ListItem>
-                            <ListItemText primary="Student Class Year" secondary="Select the student's current class year. Selection should be by credit hours. This uses the American system. 'Freshman' is a first-year student (< 30 credit hours), 'Sophmore' is a second-year student (30-59 credit hours), 'Junior' is a third-year student (60-89 credit hours), and 'Senior' is a student in their final year of school (90+ credit hours). If the student has been at the college for four or more years, select 'Senior.'"/>
+                            <ListItemText primary="Student Class Year" secondary="Select the student's current class year. Selection should be by credit hours. This uses the American system. 'Freshman' is a first-year student (< 30 credit hours), 'Sophomore' is a second-year student (30-59 credit hours), 'Junior' is a third-year student (60-89 credit hours), and 'Senior' is a student in their final year of school (90+ credit hours). If the student has been at the college for four or more years, select 'Senior.'"/>
                           </ListItem>
                           <ListItem>
                             <ListItemText primary="Student Major" secondary="Enter the student's major. Write 'Undeclared' if the student is undeclared. Spaces, apostrophes, and hyphens are allowed."/>

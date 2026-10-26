@@ -59,18 +59,31 @@ function UserOverview() {
 
 function ProgrammerOverview() {
       return (
-            <Card sx={{m:4, mt:2, p:2, textAlign:"left"}}>
-                  <Typography variant="body1" sx={{fontWeight:"bold"}}>Programmer Overview </Typography>
-                  <Divider sx={{mb:2}}></Divider>
-                  <Typography variant="body1">
-                        This course registration system is designed to assist students and instructors in enrolling professors and students, adding or dropping classes, as well as managing course information. 
-                        It is built using the React Material UI framework for Typescript. 
-                        It has been tested using the Vite programming environment. 
-                        The "ReadMe" file for the website has a full list of dependencies for anyone working on the website.
-                        Additional information on all aspects of the site may be found in the manuals below.
-                  </Typography>
-                  <Typography sx={{mt:"2vh"}} variant="body1">Need to access the code? Click the button below to be brought to our Github Repository.</Typography>
-                  <Button href="https://github.com/Cydewyn/web_dev_marietta_2026" variant="outlined" sx={{mt:"2vh"}}>Access the Github</Button>
-            </Card>
+            <Box>
+                  <Card sx={{m:4, mt:2, p:2, textAlign:"left"}}>
+                        <Typography variant="body1" sx={{fontWeight:"bold"}}>Programmer Overview </Typography>
+                        <Divider sx={{mb:2}}></Divider>
+                        <Typography variant="body1">
+                              This course registration system is designed to assist students and instructors in enrolling professors and students, adding or dropping classes, as well as managing course information. 
+                              It is built using the React Material UI framework for Typescript. 
+                              It has been tested using the Vite build tool. 
+                              The "ReadMe" file for the website has a full list of dependencies for anyone working on the website.
+                              Additional information on all aspects of the site may be found in the manuals below.
+                        </Typography>
+                        <Typography sx={{mt:"2vh"}} variant="body1">Need to access the code? Click the button below to be brought to our Github Repository.</Typography>
+                        <Button href="https://github.com/Cydewyn/web_dev_marietta_2026" variant="outlined" sx={{mt:"2vh"}}>Access the Github</Button>
+                  </Card>
+                  <Divider></Divider>
+                  <Card sx={{m:4, mt:2, p:2, textAlign:"left"}}>
+                        <Typography variant="body1" sx={{fontWeight:"bold"}}>How to Run Build</Typography>
+                        <Divider sx={{mb:2}}></Divider>
+                        <Typography variant="body1">
+                              Before attempting to build or run the website, ensure all dependencies are installed (see README for full list of required commands). 
+                              To build the site in a local development environment, you can use the command "npm run build" within the directory. 
+                              If you wish to run the site in a testing mode, you can use "npm run dev." 
+                              Further instructions on using these commands can be found in the Vite documentation (linked below under "Dependencies").
+                        </Typography>
+                  </Card>
+            </Box>
       )
 }

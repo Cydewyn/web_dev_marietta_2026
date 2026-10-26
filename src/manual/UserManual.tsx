@@ -38,6 +38,7 @@ function StudentFAQ() {
                               <Typography variant="body2" sx={{textAlign:"left"}}>
                                     To register for courses, go to the "Register Course" page. 
                                     Once on the page, you can fill out the form with your information and the course information. 
+                                    For more information, see "How to Register for a Course" in the how-to guides below. 
                               </Typography>
                         </AccordionDetails>
                   </Accordion>
@@ -49,6 +50,7 @@ function StudentFAQ() {
                               <Typography variant="body2" sx={{textAlign:"left"}}>
                                     To drop courses, go to the "Drop Course" page. 
                                     Once on the page, you can fill out the form with your information and the course information. 
+                                    For more information, see "How to Drop a Course" in the how-to guides below. 
                               </Typography>
                         </AccordionDetails>
                   </Accordion>
@@ -70,6 +72,7 @@ function AdministratorFAQ() {
                               <Typography variant="body2" sx={{textAlign:"left"}}>
                                     To enroll a student, go to the "Enroll Student" page. 
                                     Once there, fill out the form with the student's information. 
+                                    For more information, see "How to Enroll a Student" in the how-to guides below. 
                               </Typography>
                         </AccordionDetails>
                   </Accordion>
@@ -81,6 +84,7 @@ function AdministratorFAQ() {
                               <Typography variant="body2" sx={{textAlign:"left"}}>
                                     To register an instructor, go to the "Add Instructor" page. 
                                     Once there, fill out the instructor's details and submit them. 
+                                    For more information, see "How to Add an Instructor" in the how-to guides below. 
                               </Typography>
                         </AccordionDetails>
                   </Accordion>
@@ -92,6 +96,7 @@ function AdministratorFAQ() {
                               <Typography variant="body2" sx={{textAlign:"left"}}>
                                     To create a course, go to the "Add Course" page. 
                                     Once there, you will fill out the form with the class details. 
+                                    For more information, see "How to Add a Course" in the how-to guides below. 
                               </Typography>
                         </AccordionDetails>
                   </Accordion>
@@ -123,7 +128,7 @@ function DetailedHowTo() {
                               <ListItemText primary="Student Last Name" secondary="Required. Enter the student's last name in its entirety. For example, 'Williams,' 'O'Connell', 'al-Sayid,' or 'de las Casas.' Spaces, hyphens, and apostrophes are permitted."/>
                               </ListItem>
                               <ListItem>
-                              <ListItemText primary="Student Class Year" secondary="Required. Select the student's current class year. Selection should be by credit hours. This uses the American system. 'Freshman' is a first-year student (< 30 credit hours), 'Sophmore' is a second-year student (30-59 credit hours), 'Junior' is a third-year student (60-89 credit hours), and 'Senior' is a student in their final year of school (90+ credit hours). If the student has been at the college for four or more years, select 'Senior.'"/>
+                              <ListItemText primary="Student Class Year" secondary="Required. Select the student's current class year. Selection should be by credit hours. This uses the American system. 'Freshman' is a first-year student (< 30 credit hours), 'Sophomore' is a second-year student (30-59 credit hours), 'Junior' is a third-year student (60-89 credit hours), and 'Senior' is a student in their final year of school (90+ credit hours). If the student has been at the college for four or more years, select 'Senior.'"/>
                               </ListItem>
                               <ListItem>
                               <ListItemText primary="Student Major" secondary="Optional. Enter the student's major. Write 'Undeclared' if the student is undeclared. Spaces, apostrophes, and hyphens are allowed."/>
