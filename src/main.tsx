@@ -135,7 +135,7 @@ function App() {
         bgcolor: "background.primary",
       }}
     >
-      <Header></Header>
+      <Header/>
       {/* Navigation Bar */}
       <AppBar
         position="fixed"
