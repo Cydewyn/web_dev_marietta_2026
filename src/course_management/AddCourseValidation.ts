@@ -115,6 +115,14 @@ export function validateCourseForm(
     errors.push("Enrollment Cap must contain exactly 2 digits.");
   }
 
+  if (parseInt(courseSection) < 0) {
+    errors.push("Enrollment Cap cannot be less than 0.");
+  }
+
+  if (parseInt(enrollmentCap) < 1) {
+    errors.push("Enrollment Cap cannot be less than 1.");
+  }
+
   // Display validation results
   if (errors.length > 0) {
     alert(
