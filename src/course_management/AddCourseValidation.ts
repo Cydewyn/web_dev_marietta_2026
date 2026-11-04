@@ -37,15 +37,6 @@ export function validateCourseForm(
 
   const errors: string[] = [];
 
-  // Course Year
-  if (courseYear === "") {
-    errors.push("Course Year is required.");
-  } else if (!yearPattern.test(courseYear)) {
-    errors.push("Course Year must contain exactly 4 digits.");
-  } else if (Number(courseYear) < 2026) {
-    errors.push("Course Year cannot be before 2026.");
-  }
-
   // Course Prefix
   if (coursePrefix === "") {
     errors.push("Course Prefix is required.");
