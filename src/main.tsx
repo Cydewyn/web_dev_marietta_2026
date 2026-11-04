@@ -31,11 +31,9 @@ import HelpIcon from "@mui/icons-material/Help";
 
 // Import Pages
 import Home from "./Home";
-import Students from "./user_management/Students";
-import Instructors from "./user_management/Instructors";
-import AddCourse from "./course_management/AddCourse";
-import RegisterCourse from "./course_management/RegisterCourse";
-import DropCourse from "./course_management/DropCourse";
+import { ManageCourses } from "./main_pages/ManageCourses";
+import { ManageInstructors } from "./main_pages/ViewInstructors";
+import { ManageStudents } from "./main_pages/ViewStudents";
 import Manual from "./manual/Manual";
 
 // DarkMode Theme
@@ -87,24 +85,16 @@ const navigationLinks = [
     path: "/",
   },
   {
-    label: "Register Student",
-    path: "/enroll_student",
+    label: "Manage Students",
+    path: "/student_management",
   },
   {
-    label: "Add Instructor",
-    path: "/add_instructor",
+    label: "Manage Instructors",
+    path: "/instructor_management",
   },
   {
-    label: "Add Course",
-    path: "/add_course",
-  },
-  {
-    label: "Register Course",
-    path: "/register",
-  },
-  {
-    label: "Drop Course",
-    path: "/drop",
+    label: "Manage Courses",
+    path: "/course_management",
   },
 ];
 
@@ -242,32 +232,20 @@ function App() {
 
           {/* Enroll Student */}
           <Route
-            path="/enroll_student"
-            element={<Students />}
+            path="/student_management"
+            element={<ManageStudents />}
           />
 
           {/* Add Instructor */}
           <Route
-            path="/add_instructor"
-            element={<Instructors />}
+            path="/instructor_management"
+            element={<ManageInstructors />}
           />
 
           {/* Add Course */}
           <Route
-            path="/add_course"
-            element={<AddCourse />}
-          />
-
-          {/* Register Course */}
-          <Route
-            path="/register"
-            element={<RegisterCourse />}
-          />
-
-          {/* Drop Course */}
-          <Route
-            path="/drop"
-            element={<DropCourse />}
+            path="/course_management"
+            element={<ManageCourses />}
           />
 
           {/* Manual */}
